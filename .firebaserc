@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-app-todo-dfa03": {
+      "hosting": {
+        "angular-app-todo-PHAN": [
+          "angular-app-todo-dfa03"
+        ]
+      }
+    }
+  }
+}

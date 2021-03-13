@@ -123,6 +123,10 @@
               "devServerTarget": "angular-app-todo-PHAN:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
