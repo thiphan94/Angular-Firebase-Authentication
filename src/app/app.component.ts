@@ -29,4 +29,6 @@ export class AppComponent implements OnInit{
   handleLogout(){
     this.isSignedIn = false
   }
+  
 }
+
