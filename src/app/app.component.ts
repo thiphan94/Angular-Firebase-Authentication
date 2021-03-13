@@ -22,7 +22,7 @@ export class AppComponent implements OnInit{
     this.isSignedIn = true
   }
   async onSignin(email:string, password:string){
-    await this.FirebaseService.signup(email, password)
+    await this.FirebaseService.signin(email, password)
     if(this.FirebaseService.isLoggedIn)
     this.isSignedIn = true
   }
