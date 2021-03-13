@@ -1,6 +1,6 @@
 <h2>Hello, welcome to TODO App! </h2>
 <div class="container" id="container">
-	<div class="sign-up-container">
+	<div class="sign-up-container" *ngIf="!isSignedIn">
 		<form action="#">
 			<h1>Create Account</h1>
 			<div class="social-container">
@@ -9,12 +9,12 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>Use your email for registration</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>Sign Up</button>
+			<input type="text" #email1/>
+  			<input type="text" #password1/>
+  			<button (click)="onSignup(email1.value,password1.value)">Sign up</button>
 		</form>
 	</div>
-	<div class="sign-in-container">
+	<div class="sign-in-container" *ngIf="!isSignedIn">
 		<form action="#">
 			<h1>Sign in</h1>
 			<div class="social-container">
@@ -23,16 +23,16 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input type="text" #email/>
+  			<input type="text" #password/>
 			<a href="#">Forgot your password?</a>
-			<button>Sign In</button>
+			<button (click)="onSignin(email.value,password.value)">Sign in</button>
 		</form>
 	</div>
-	
+		
 </div>
 
-
+<app-home *ngIf="isSignedIn"(isLogout)="handleLogout()"></app-home>
 <footer>
 	<p>Created by Thi PHAN - 2021 </p>
 </footer>
